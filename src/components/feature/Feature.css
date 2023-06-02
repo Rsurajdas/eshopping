@@ -1,0 +1,32 @@
+.site-blocks-1 {
+  border-bottom: 1px solid #edf0f5;
+}
+.site-blocks-1 .divider {
+  position: relative;
+}
+.site-blocks-1 .divider:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  right: 10px;
+  background: #edf0f5;
+}
+.site-blocks-1 .divider:last-child:after {
+  display: none;
+}
+.site-blocks-1 [class*="fa-"] {
+  position: relative;
+  color: #7971ea;
+  top: -10px;
+  font-size: 50px;
+  display: inline-block;
+}
+.site-blocks-1 .text h2 {
+  color: #25262a;
+  letter-spacing: 0.05em;
+  font-size: 18px;
+}
+.site-blocks-1 .text p:last-child {
+  margin-bottom: 0;
+}

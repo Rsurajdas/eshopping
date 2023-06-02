@@ -1,0 +1,30 @@
+.error-wrap .gif {
+  display: flex;
+  justify-content: center;
+}
+
+.error-wrap .content {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.error-wrap .content .main-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.error-wrap p {
+  font-size: 1.3rem;
+  padding: 0.5rem 0;
+}
+
+.error-wrap button {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: #0046d4;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
