@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-import blogImg from "../../img/blog_1.jpg";
 
 const TextBlock = () => {
   return (
@@ -10,7 +9,7 @@ const TextBlock = () => {
             <div className="block-16">
               <figure>
                 <img
-                  src={blogImg}
+                  src="../img/blog_1.jpg"
                   alt="placeholder"
                   className="img-fluid rounded"
                 />

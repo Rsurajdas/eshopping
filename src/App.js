@@ -9,6 +9,10 @@ const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ErrorPage = lazy(() => import("./components/ErrorPage"));
+const Shop = lazy(() => import("./pages/Shop"));
+const Cart = lazy(() => import("./pages/Cart"));
+const FavoritePage = lazy(() => import("./pages/FavoritePage.js"));
+const ProductDetailPage = lazy(() => import("./pages/ProductDetailPage"));
 
 const router = createBrowserRouter([
   {
@@ -41,6 +45,38 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loader />}>
             <Contact />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/shop",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Shop />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/cart",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Cart />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/favorite",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <FavoritePage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/shop/:productid",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <ProductDetailPage />
           </Suspense>
         ),
       },

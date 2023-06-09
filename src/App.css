@@ -283,3 +283,18 @@ a {
 .btn-block {
   width: 100%;
 }
+.ml-auto {
+  margin-left: auto;
+}
+.text-primary {
+  color: #7971ea !important;
+}
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}

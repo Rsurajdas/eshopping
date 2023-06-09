@@ -1,8 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./TopNav.css";
 
 const TopNav = () => {
+  const { totalProductCount } = useSelector((state) => state.carts);
   return (
     <div className="site-navbar-top">
       <Container>
@@ -31,18 +33,18 @@ const TopNav = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/favorite">
                     <i className="fa-regular fa-heart"></i>
                   </Link>
                 </li>
                 <li>
                   <Link to="/cart" className="site-cart">
                     <i className="fa-solid fa-cart-shopping"></i>
-                    <span className="count">2</span>
+                    <span className="count">{totalProductCount}</span>
                   </Link>
                 </li>
                 <li className="d-inline-block d-md-none ml-md-0">
-                  <Link to="/" className="site-menu-toggle js-menu-toggle">
+                  <Link to="/" className="site-menu-toggle">
                     <i className="fa-solid fa-bars"></i>
                   </Link>
                 </li>

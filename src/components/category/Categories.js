@@ -1,8 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
 import "./Categories.css";
-import womenImg from "../../img/women.jpg";
-import menImg from "../../img/men.jpg";
-import kidImg from "../../img/children.jpg";
 import Category from "./Category";
 
 const Categories = () => {
@@ -11,13 +8,13 @@ const Categories = () => {
       <Container>
         <Row>
           <Col sm={6} md={6} lg={4} className="mb-4 mb-lg-0">
-            <Category img={womenImg} title="Women" />
+            <Category img="../img/women.jpg" title="Women" />
           </Col>
           <Col sm={6} md={6} lg={4} className="mb-4 mb-lg-0">
-            <Category img={kidImg} title="Children" />
+            <Category img="../img/children.jpg" title="Children" />
           </Col>
           <Col sm={6} md={6} lg={4} className="mb-4 mb-lg-0">
-            <Category img={menImg} title="Men" />
+            <Category img="../img/men.jpg" title="Men" />
           </Col>
         </Row>
       </Container>

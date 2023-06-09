@@ -9,7 +9,7 @@ const Nav = () => {
       role="navigation"
     >
       <Container>
-        <ul className="site-menu js-clone-nav d-none d-md-block">
+        <ul className="site-menu d-none d-md-block">
           <li>
             <NavLink to="/">Home</NavLink>
           </li>

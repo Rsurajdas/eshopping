@@ -1,0 +1,30 @@
+.block-4 {
+  position: relative;
+  -webkit-box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+.block-4 .block-4-text h3 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.block-4 .block-4-text h3 a {
+  display: block;
+  text-decoration: none;
+}
+.block-4-image img {
+  height: 200px;
+  object-fit: contain;
+}
+.plain-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.plain-btn:focus {
+  outline: none;
+}
+.plain-btn:hover {
+  color: hsl(244, 74%, 48%) !important;
+}

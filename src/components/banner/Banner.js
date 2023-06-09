@@ -1,13 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import heroImg from "../../img/hero_1.jpg";
 import "../Button.css";
 
 const Banner = () => {
   return (
     <div
       className="site-blocks-cover"
-      style={{ backgroundImage: `url(${heroImg}) ` }}
+      style={{ backgroundImage: `url(../img/hero_1.jpg) ` }}
     >
       <Container>
         <Row className="align-items-start align-items-md-center justify-content-end">
