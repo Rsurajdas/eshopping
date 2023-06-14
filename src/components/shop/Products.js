@@ -2,7 +2,7 @@ import { memo } from "react";
 import { useSelector, shallowEqual, useDispatch } from "react-redux";
 import { Row, Col } from "react-bootstrap";
 import Product from "./Product";
-import { addToCart } from "../../store/actions/cartAction";
+import { cartActions } from "../../store/reducers/cartReducer";
 
 const Products = memo(() => {
   const { products } = useSelector((state) => state.products, shallowEqual);
@@ -14,7 +14,7 @@ const Products = memo(() => {
           <Product
             key={product.id}
             {...product}
-            onAdd={() => dispatch(addToCart(product))}
+            onAdd={() => dispatch(cartActions.addToCart(product))}
           />
         ))}
       </Row>

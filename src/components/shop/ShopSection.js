@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { initializeProducts } from "../../store/actions/productsAction";
+import { initializeProductsAction } from "../../store/actions/productsAction";
 import { Container, Row } from "react-bootstrap";
 import Aside from "./Aside";
 import Products from "./Products";
@@ -9,7 +9,7 @@ import "./shop.css";
 const ShopSection = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(initializeProducts());
+    dispatch(initializeProductsAction());
   }, [dispatch]);
   return (
     <div className="site-section">

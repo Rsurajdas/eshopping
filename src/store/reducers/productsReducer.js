@@ -1,13 +1,21 @@
-export const productsReducer = (state = { products: [] }, action) => {
-  switch (action.type) {
-    case "INITIALIZE_PRODUCTS": {
-      return {
-        products: action.products,
-      };
-    }
-    case "ADD_TO_FAVORITE": {
+import { createSlice } from "@reduxjs/toolkit";
+
+const productSlice = createSlice({
+  name: "products",
+  initialState: { products: [] },
+  reducers: {
+    initializeProducts(state, action) {
+      state.products = action.payload.map((item) => {
+        return {
+          ...item,
+          isFav: false,
+        };
+      });
+    },
+    addToFavorite(state, action) {
+      const id = action.payload;
       let revisedProducts = state.products.map((item) => {
-        if (item.id === action.id) {
+        if (item.id === id) {
           return {
             ...item,
             isFav: true,
@@ -15,11 +23,10 @@ export const productsReducer = (state = { products: [] }, action) => {
         }
         return item;
       });
-      return {
-        products: revisedProducts,
-      };
-    }
-    default:
-      return state;
-  }
-};
+      state.products = revisedProducts;
+    },
+  },
+});
+
+export const productActions = productSlice.actions;
+export default productSlice;

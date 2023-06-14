@@ -2,12 +2,7 @@ import { memo } from "react";
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
 import CartRow from "./CartRow";
-import {
-  increaseQuantity,
-  decreaseQuantity,
-  setQuantity,
-  removeFromCart,
-} from "../../store/actions/cartAction";
+import { cartActions } from "../../store/reducers/cartReducer";
 import "./cart.css";
 import "../Button.css";
 import PriceBreak from "./PriceBreak";
@@ -41,12 +36,18 @@ const CartSection = memo(() => {
                       <CartRow
                         key={item.id}
                         {...item}
-                        onIncrement={() => dispatch(increaseQuantity(item.id))}
-                        onDecrement={() => dispatch(decreaseQuantity(item.id))}
-                        onQuantityChange={(id, qty) =>
-                          dispatch(setQuantity(id, qty))
+                        onIncrement={() =>
+                          dispatch(cartActions.increment(item.id))
                         }
-                        onRemove={() => dispatch(removeFromCart(item.id))}
+                        onDecrement={() =>
+                          dispatch(cartActions.decrement(item.id))
+                        }
+                        onQuantityChange={(id, qty) =>
+                          dispatch(cartActions.setQuantity({ id, qty }))
+                        }
+                        onRemove={() =>
+                          dispatch(cartActions.removeFromCart(item.id))
+                        }
                       />
                     ))}
                   </tbody>

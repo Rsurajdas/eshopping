@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { addToFavorite } from "../../store/actions/productsAction";
+import { productActions } from "../../store/reducers/productsReducer";
 import Favorite from "./Favorite";
 
 const Product = ({ id, image, title, category, price, onAdd, isFav }) => {
@@ -33,7 +33,7 @@ const Product = ({ id, image, title, category, price, onAdd, isFav }) => {
           </div>
         </div>
         <Favorite
-          onAddFavorite={() => dispatch(addToFavorite(id))}
+          onAddFavorite={() => dispatch(productActions.addToFavorite(id))}
           isFav={isFav}
         />
       </div>

@@ -39,7 +39,7 @@ const CartRow = ({
             className="form-control text-center"
             // defaultValue={quantity}
             value={quantity}
-            onChange={(e) => onQuantityChange(Number(e.target.value), id)}
+            onChange={(e) => onQuantityChange(id, Number(e.target.value))}
           />
           <div className="input-group-append">
             <button

@@ -1,23 +1,19 @@
-export const initializeProducts = () => (dispatch) => {
-  fetch(`https://fakestoreapi.com/products`)
-    .then((res) => res.json())
-    .then((data) =>
-      dispatch({
-        type: "INITIALIZE_PRODUCTS",
-        products: data.map((item) => {
-          return {
-            ...item,
-            isFav: false,
-          };
-        }),
-      })
-    )
-    .catch((err) => console.log(err));
-};
+import { productActions } from "../reducers/productsReducer";
 
-export const addToFavorite = (id) => {
-  return {
-    type: "ADD_TO_FAVORITE",
-    id,
+export const initializeProductsAction = () => async (dispatch) => {
+  const fetchData = async () => {
+    const res = await fetch(`https://fakestoreapi.com/products`);
+    if (!res.ok) {
+      throw new Error("Error while fetching Data");
+    }
+    const data = await res.json();
+    return data;
   };
+
+  try {
+    const ProductsData = await fetchData();
+    dispatch(productActions.initializeProducts(ProductsData));
+  } catch (error) {
+    console.log(error);
+  }
 };
