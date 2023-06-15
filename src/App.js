@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: "/",
+        index: true,
         element: (
           <Suspense fallback={<Loader />}>
             <Home />
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/about",
+        path: "about",
         element: (
           <Suspense fallback={<Loader />}>
             <About />
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/contact",
+        path: "contact",
         element: (
           <Suspense fallback={<Loader />}>
             <Contact />
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/shop",
+        path: "shop",
         element: (
           <Suspense fallback={<Loader />}>
             <Shop />
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/cart",
+        path: "cart",
         element: (
           <Suspense fallback={<Loader />}>
             <Cart />
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/favorite",
+        path: "favorite",
         element: (
           <Suspense fallback={<Loader />}>
             <FavoritePage />
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/shop/:productid",
+        path: "shop/:productid",
         element: (
           <Suspense fallback={<Loader />}>
             <ProductDetailPage />

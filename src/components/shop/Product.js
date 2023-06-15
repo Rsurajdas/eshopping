@@ -11,13 +11,13 @@ const Product = ({ id, image, title, category, price, onAdd, isFav }) => {
     <Col sm={6} lg={4} className="mb-4">
       <div className="block-4 border rounded">
         <figure className="block-4-image text-center p-2">
-          <Link to={`/shop/${id}`}>
+          <Link to={id.toString()}>
             <img src={image} alt={title} className="img-fluid" />
           </Link>
         </figure>
         <div className="block-4-text p-2">
           <h3>
-            <Link to="/" className="ellipsis">
+            <Link to={id.toString()} className="ellipsis">
               {title}
             </Link>
           </h3>

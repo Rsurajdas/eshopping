@@ -11,22 +11,52 @@ const Nav = () => {
       <Container>
         <ul className="site-menu d-none d-md-block">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink
+              to=""
+              className={({ isActive }) => (isActive ? "active" : null)}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink
+              to="about"
+              className={({ isActive }) => (isActive ? "active" : null)}
+            >
+              About
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/shop">Shop</NavLink>
+            <NavLink
+              to="shop"
+              className={({ isActive }) => (isActive ? "active" : null)}
+            >
+              Shop
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/">Catalogue</NavLink>
+            <NavLink
+              to="catalogue"
+              className={({ isActive }) => (isActive ? "active" : null)}
+            >
+              Catalogue
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/">New Arrivals</NavLink>
+            <NavLink
+              to="new-arrival"
+              className={({ isActive }) => (isActive ? "active" : null)}
+            >
+              New Arrivals
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink
+              to="contact"
+              className={({ isActive }) => (isActive ? "active" : null)}
+            >
+              Contact
+            </NavLink>
           </li>
         </ul>
       </Container>
